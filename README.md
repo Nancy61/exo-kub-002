@@ -10,6 +10,21 @@ Pré-requis:
 -kubernetes
 -git clone https://github.com/Nancy61/exo-kub-002
 
+Comment j'ai envoyé l'image sur dockerhub:
+J'ai exécuté les commandes suivantes:
+    docker build -t exo2-kub . 
+    docker run --name test-exo2kub -d -p 8080:8080 exo2-kub
+    docker tag exo2-kub nancylence/exo2-kub
+    docker push nancylence/exo2-kub
+
+Comment j'ai envoyé le projet sur git:
+1-Créer un nouveau repo public sur mon git
+2-Ensuite j'ai exécuté les commandes suivantes sur mon terminal:
+    git init
+    git add .
+    git remote add origin https://github.com/Nancy61/exo-kub-002.git
+    git push -f origin main 
+
 Comment déployer l'application:
 1-Connectez-vous sur votre terminal en tant qu'administrateur.
 2-Saisissez les commandes suivantes:
@@ -22,5 +37,5 @@ Comment déployer l'application:
     2-7 kubectl get pods   #si vous souhaitez augmenter le nombre de vos pods
 
 NB:
-Si vous avez déjà déployé un site qui écoute sur le port 80, pensez à le supprimer avant de déployer cette application avec la commande:
+Si vous avez déjà déployé un site qui écoute sur le port 8080, pensez à le supprimer avant de déployer cette application avec la commande:
     - kubectl delete svc example-deployment
