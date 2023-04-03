@@ -28,7 +28,7 @@ Comment j'ai envoyé le projet sur git:
 Comment déployer l'application:
 1-Connectez-vous sur votre terminal en tant qu'administrateur.
 2-Saisissez les commandes suivantes:
-   2-1 kubectl create deployment exo1-deployment --image nancylence/apptest
+   2-1 kubectl create deployment exo1-deployment --image nancylence/exo2-kub
    2-2 kubectl get deployment #pour vérifier la création de votre déploiement.
     2-3 kubectl expose deployment exo1-deployment --port 80 --type LoadBalancer
     2-4 kubectl get svc   #pour vérifier la création de votre service
